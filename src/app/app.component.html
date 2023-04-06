@@ -13,7 +13,7 @@
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
   </mat-form-field>
 
-  <div class="mat-elevation-z8">
+  <div class="table-container">
     <table mat-table [dataSource]="dataSource" matSort>
 
       <!-- ID Column -->
@@ -71,7 +71,7 @@
       </ng-container>
 
       <!-- Action Column -->
-      <ng-container matColumnDef="package">
+      <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
         <td mat-cell *matCellDef="let row">
           <button mat-icon-button color="primary" (click)="openEditForm(row)">
